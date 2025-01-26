@@ -17,3 +17,20 @@ public class Solution {
         return result;
     }
 }
+
+// two pointers
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        for(var p1 = 0; p1<nums.Length; p1++)
+        {
+            var numberToFind = target - nums[p1];
+            for(var p2 = p1+1; p2 < nums.Length; p2++)
+            {
+                if(nums[p2] == numberToFind)
+                    return [p1, p2];
+            }
+        }
+
+        return null;
+    }
+}
