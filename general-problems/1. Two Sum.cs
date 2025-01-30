@@ -34,3 +34,22 @@ public class Solution {
         return null;
     }
 }
+
+// hash map
+
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        var dic = new Dictionary<int, int>();
+        for(var i = 0; i < nums.Length; i++)
+        {
+            if(dic.ContainsKey(nums[i]))
+                return [dic[nums[i]], i];
+            else
+            {
+                var numberToFind = target - nums[i];
+                dic[numberToFind] = i;
+            }
+        }
+        return null;
+    }
+}
