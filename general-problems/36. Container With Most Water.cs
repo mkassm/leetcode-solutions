@@ -14,9 +14,12 @@ public class Solution {
         {
             // area = height (minimum) * width (distance between two pointers)
             var currArea = Math.Min(height[left], height[right]) * (right - left);
-						// update max area
+			// update max area
             maxArea = Math.Max(maxArea, currArea);
 
+            // only shift the min value of two pointers
+            // min is impact area calculation
+            // to keep the max area positive
             if (height[left] < height[right])
                 left++;
             else
