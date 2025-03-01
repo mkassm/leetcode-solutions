@@ -1,8 +1,8 @@
 // Link: https://leetcode.com/problems/backspace-string-compare
 
 // Using Brute force
-// Time: O(n)
-// Space: O(1)
+// Time: O(n + m)
+// Space: O(n + m)
 public class Solution {
     public bool BackspaceCompare(string s, string t) {
         return getCleanText(s) == getCleanText(t);
